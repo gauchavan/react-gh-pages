@@ -12,7 +12,7 @@ class Contact extends Component{
                 <ContainerRow className='width100Percent outerContainerMargin mobileColumn margin0'>
                     <ContainerRow className='widthAdjustment justifyContentCenter alignItemCenter padding10All mobileColumn'>
                         <SectionHeading color={COLOR.WHITE}>
-                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.BLUE} name='fas fa-phone-alt'/>
+                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.BLUE} name='phone-alt'/>
                             <span className='hideMobile'>Call us on:</span>
                         </SectionHeading>
                         <SubTitle className='margin0' color={COLOR.WHITE}>+919820746792 / +918082016560</SubTitle>
@@ -22,7 +22,7 @@ class Contact extends Component{
                     </SectionHeading>
                     <ContainerRow className='widthAdjustment justifyContentCenter alignItemCenter padding10All mobileColumn'>
                         <SectionHeading color={COLOR.WHITE}>
-                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.BLUE} name='fas fa-envelope-open-text'/>
+                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.BLUE} name='envelope-open-text'/>
                             <span className='hideMobile'>Email us on:</span>
                         </SectionHeading>
                         <SubTitle className='margin0' color={COLOR.WHITE}>sksi.consultancy@gmail.com</SubTitle>

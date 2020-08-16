@@ -39,7 +39,7 @@ class Service extends Component{
                                      if (index < 3) {
                                         return ( 
                                             <Paragraph key={key+index} margin='3px 0px' font='16px'>
-                                                <FontIcon padding='0px 10px 0px 0px' font='5px' align='center' color={COLOR.BLACK} name='fas fa-circle'/>
+                                                <FontIcon padding='0px 10px 0px 0px' font='5px' align='center' color={COLOR.BLACK} name='circle'/>
                                                  {data}
                                             </Paragraph>
                                         );

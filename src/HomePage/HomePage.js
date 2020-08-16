@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './../FontAwesomeIcon/FontAwesomeIcon';
 import SectionOne from './../SectionOne/SectionOne';
 import Footer from './../Footer/Footer';
 import Header from './../Header/Header'
@@ -17,9 +18,13 @@ import {
   } from "react-router-dom";
 import AboutUs from '../AboutUs/AboutUs';
 
+{/* <BrowserRouter basename={window.location.pathname || ''}>
+  <Route exact path="/" component={Index} />
+</BrowserRouter> */}
+
   export default function RouterSection() {
     return (
-        <Router>
+        <Router basename={window.location.pathname || ''}>
             <Switch>
                 <Route exact path='/' children={<HomePage />} />
                 <Route path='/about' children={<AboutUsPage />} />

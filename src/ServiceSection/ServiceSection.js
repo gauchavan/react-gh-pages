@@ -25,7 +25,7 @@ class ServiceSection extends Component{
                         
                         <Span style={{border: '1px solid #114366', padding: '5px'}}>
                                 <Link to="/about" className='readMoreButton'>
-                                    <FontIcon padding='0px 5px' font='18px' align='center' color={COLOR.BLUE} name='fas fa-arrow-right'/>
+                                    <FontIcon padding='0px 5px' font='18px' align='center' color={COLOR.BLUE} name='arrow-right'/>
                                     Read more 
                                 </Link>
                                 
@@ -37,12 +37,12 @@ class ServiceSection extends Component{
                         <SectionHeading underline='underline' color={COLOR.BLUE} className='marginBottom20'>Services</SectionHeading>
                         <ContainerColumn className='width100Percent '>
                             <Services>
-                                <Service iconName='fas fa-gavel' serviceName='COMPANY LAW ADVISORY SERVICES'></Service>
-                                <Service iconName='fas fa-book-reader' serviceName='SEBI LAW ADVISORY SERVICES'></Service>
+                                <Service iconName='gavel' serviceName='COMPANY LAW ADVISORY SERVICES'></Service>
+                                <Service iconName='book-reader' serviceName='SEBI LAW ADVISORY SERVICES'></Service>
                             </Services>
                             <Services>
-                                <Service iconName='fas fa-file-contract' serviceName='FEMA/RBI/NBFC ADVISORY SERVICES'></Service>
-                                <Service iconName='fas fa-balance-scale-left' serviceName='LEGAL ADVISORY SERVICES'></Service>
+                                <Service iconName='file-contract' serviceName='FEMA/RBI/NBFC ADVISORY SERVICES'></Service>
+                                <Service iconName='balance-scale-left' serviceName='LEGAL ADVISORY SERVICES'></Service>
                             </Services>
                         </ContainerColumn>
                     </ContainerColumn>

@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
-import {FontIconSpan, Icon} from './../Styled/CommonStyles';
+import {FontIconSpan} from './../Styled/CommonStyles';
 import './../CSS/CommonStyles.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
+
+console.log(FontAwesomeIcon);
 class FontIcon extends Component{
     render(){
+        const fontName = this.props.name;
         return(
             <FontIconSpan  padding={this.props.padding} font={this.props.font} color={this.props.color} align={this.props.align}>
-                <Icon className={this.props.name}></Icon>
+                <FontAwesomeIcon icon={fontName}/>
             </FontIconSpan>
         );
     }
