@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.cca07ea3.chunk.css",
-    "main.js": "/react-gh-pages/static/js/main.3d349338.chunk.js",
-    "main.js.map": "/react-gh-pages/static/js/main.3d349338.chunk.js.map",
-    "runtime~main.js": "/react-gh-pages/static/js/runtime~main.ac2d5040.js",
-    "runtime~main.js.map": "/react-gh-pages/static/js/runtime~main.ac2d5040.js.map",
-    "static/js/2.05447c46.chunk.js": "/react-gh-pages/static/js/2.05447c46.chunk.js",
-    "static/js/2.05447c46.chunk.js.map": "/react-gh-pages/static/js/2.05447c46.chunk.js.map",
-    "index.html": "/react-gh-pages/index.html",
-    "precache-manifest.b04d77dc4af44d88d7c84f4276a275dc.js": "/react-gh-pages/precache-manifest.b04d77dc4af44d88d7c84f4276a275dc.js",
-    "service-worker.js": "/react-gh-pages/service-worker.js",
-    "static/css/main.cca07ea3.chunk.css.map": "/react-gh-pages/static/css/main.cca07ea3.chunk.css.map",
-    "static/media/CommonStyles.css": "/react-gh-pages/static/media/background.0d2c0d4f.jpg"
-  }
+    "main.css": "/SKSI/static/css/main.b59526e9.chunk.css",
+    "main.js": "/SKSI/static/js/main.f6ab20d9.chunk.js",
+    "main.js.map": "/SKSI/static/js/main.f6ab20d9.chunk.js.map",
+    "runtime-main.js": "/SKSI/static/js/runtime-main.51b6e995.js",
+    "runtime-main.js.map": "/SKSI/static/js/runtime-main.51b6e995.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/SKSI/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.cc561d13.chunk.js": "/SKSI/static/js/2.cc561d13.chunk.js",
+    "static/js/2.cc561d13.chunk.js.map": "/SKSI/static/js/2.cc561d13.chunk.js.map",
+    "index.html": "/SKSI/index.html",
+    "precache-manifest.5ac6f6e2cbdb130b1ee4133fbcf54bc8.js": "/SKSI/precache-manifest.5ac6f6e2cbdb130b1ee4133fbcf54bc8.js",
+    "service-worker.js": "/SKSI/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/SKSI/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.b59526e9.chunk.css.map": "/SKSI/static/css/main.b59526e9.chunk.css.map",
+    "static/js/2.cc561d13.chunk.js.LICENSE.txt": "/SKSI/static/js/2.cc561d13.chunk.js.LICENSE.txt",
+    "static/media/CommonStyles.css": "/SKSI/static/media/background.31336773.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51b6e995.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.cc561d13.chunk.js",
+    "static/css/main.b59526e9.chunk.css",
+    "static/js/main.f6ab20d9.chunk.js"
+  ]
 }
