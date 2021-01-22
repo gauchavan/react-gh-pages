@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {SubTitle, ContainerRow, SectionHeading} from './../Styled/CommonStyles';
 import FontIcon from './../FontIcon/FontIcon';
 import * as COLOR from './../Constants/COLOR';
-import './../Header/Header.css';
 
 
 class Contact extends Component{

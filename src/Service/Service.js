@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {SubTitle, ContainerRow, Paragraph, ContainerColumn, Span} from './../Styled/CommonStyles';
+import {SubTitle, ContainerRow, Paragraph, ContainerColumn} from './../Styled/CommonStyles';
 import { Link } from "react-router-dom";
 import FontIcon from './../FontIcon/FontIcon';
 import {ServiceData} from './../ServiceData/ServiceData';
@@ -23,6 +23,7 @@ class Service extends Component{
         } else if (serviceName === "OTHER SERVICES") {
             return '/services/4'
         }
+        return null;
     }
     render(){
         let servicePath =  this.servicePathFunc();
@@ -45,8 +46,12 @@ class Service extends Component{
                                                     </Paragraph>
                                                 );
                                             }
+
+                                            return null;
                                         })}
                                     }
+
+                                    return null;
                                 })}  
 
                                 <Paragraph color={COLOR.BLUE} className='readMoreLink' padding='10px 0px 0px 0px'>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Span, ContainerRow, Links} from './../Styled/CommonStyles';
 import './../CSS/CommonStyles.css';
-import {Navbar, Nav, Container} from "react-bootstrap"
+import {Navbar, Nav} from "react-bootstrap"
 import * as COLOR from './../Constants/COLOR';
 import logo from './../Image/SKSI_logo_crop.jpg';
 import {
