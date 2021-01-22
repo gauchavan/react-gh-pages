@@ -73,8 +73,8 @@ class Tabs extends Component {
     }
   }
   componentDidMount(){
-    const id = this.props.match.params.id;
-    console.log(id);
+    const id = this.props.id || 0;
+    console.log(id, 'tab id')
     this.setState({selected: Number(id)});
     // setTimeout(()=>{
     //   let link = document.querySelectorAll('.select')[1];
@@ -105,41 +105,32 @@ class Tabs extends Component {
   }
   render(){
     return(
-        <ContainerRow className='bannerHeight width100Percent app'>
-            <ContainerRow id='about' className='width40Percent justifyContentCenter blueBackgroundColor alignItemCenter'>
-                <ContainerColumn className='width100Percent alignItemStart nav' style={{margin: '0px 15px 0px 39%'}}>
-                    {/* <SectionHeading underline='underline' color={COLOR.WHITE} className='marginBottom20'>Type of Services</SectionHeading> */}
-                    {items.map((item, key)=>{
-                        const activeClass = key === this.state.selected ? 'active' : '';
-                        return (
-                                    <a className={`${activeClass} select`} 
-                                        key={item.name} 
-                                        onClick={e=>this.setSelected(e, key)}>
-                                        <span>{item.name}</span>
-                                    </a>
-                                )
-                    })}
-                </ContainerColumn>
-            </ContainerRow>    
-            <ContainerRow id='service' className='width60Percent justifyContentCenter grayBackgroundColor alignItemCenter'>
-                <ContainerColumn className='width100Percent alignItemStart' style={{margin: '0px 24% 0px 4%'}}>
-                    {/* <SectionHeading underline='underline' color={COLOR.BLUE} className='marginBottom20'>Services</SectionHeading> */}
-                    <ContainerColumn className='width100Percent items'>
-                    {this.renderItems()}
-                    </ContainerColumn>
-                </ContainerColumn>
-            </ContainerRow>
-        </ContainerRow>  
-    //   <ContainerRow className='app outerContainerMargin'>
-    //     <ContainerColumn className="nav">
-         
-    //     </ContainerColumn>
-    //     <ContainerColumn className="items">
-            
-    //     </ContainerColumn>
-    //   </ContainerRow>
+      <ContainerRow className='bannerHeight width100Percent app'>
+          <ContainerRow id='about' className='width40Percent justifyContentCenter blueBackgroundColor alignItemCenter'>
+              <ContainerColumn className='width100Percent alignItemStart nav' style={{margin: '0px 15px 0px 39%'}}>
+                  <SectionHeading underline='underline' color={COLOR.HEADING} className='marginBottom20'>Type of Services</SectionHeading>
+                  {items.map((item, key)=>{
+                      const activeClass = key === this.state.selected ? 'active' : '';
+                      return (
+                                  <a className={`${activeClass} select serviceTabColor`} 
+                                      key={item.name} 
+                                      onClick={e=>this.setSelected(e, key)}>
+                                      <span>{item.name}</span>
+                                  </a>
+                              )
+                  })}
+              </ContainerColumn>
+          </ContainerRow>    
+          <ContainerRow id='service' className='width60Percent justifyContentCenter grayBackgroundColor alignItemCenter'>
+              <ContainerColumn className='width100Percent alignItemStart' style={{margin: '0px 24% 0px 4%'}}>
+                  <ContainerColumn className='width100Percent items'>
+                  {this.renderItems()}
+                  </ContainerColumn>
+              </ContainerColumn>
+          </ContainerRow>
+      </ContainerRow>
     )
   }
 }
 
-export default withRouter(Tabs)
+export default Tabs

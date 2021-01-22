@@ -40,13 +40,14 @@ export const SubTitle= styled.p`
     font-size: ${props => props.font ? props.font : '21px'};
     margin: 15px;
     color: ${props => props.color};
+    text-align: justify
 `
 export const Paragraph= styled.p`
     font-family: 'Fira_Sans_Regular';
     font-size: ${props => props.font ? props.font : '16px'};
     margin: ${props => props.margin ? props.margin : '5px 15px'};
     color: ${props => props.color};
-    text-align: ${props => props.align ? props.align : 'inherit'};
+    text-align: ${props => props.align ? props.align : 'justify'};
 `
 
 export const Title = styled.h1`
@@ -56,7 +57,7 @@ export const Title = styled.h1`
     color: ${props => props.color};
 `
 export const SectionHeading = styled.div`
-    justify-content: flex-start;
+    justify-content: ${props => props.justifyContent ? props.justifyContent : 'flex-start'};
     font-size: 25px;
     font-family: 'Fira_Sans_SemiBold';
     color: ${props => props.color}
@@ -80,8 +81,8 @@ export const Button = styled.button`
     padding: 12px;
     font-size: 20px;
     font-family: 'Fira_Sans_Regular';
-    background: ${COLOR.ORANGE};
-    border:2px solid ${COLOR.ORANGE};
+    background: ${COLOR.DARK_BLUE};
+    border:2px solid ${COLOR.DARK_BLUE};
     color: ${COLOR.WHITE};
     margin: 15px 0px;
     cursor: pointer; 

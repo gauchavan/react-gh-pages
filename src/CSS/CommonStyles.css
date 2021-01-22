@@ -1,5 +1,5 @@
 .headerFixed{
-    position: fixed;
+    position: fixed !important;
 }
 
 .headerNotFixed{
@@ -13,6 +13,10 @@
     height: 60px;
     background-color: #fff;
     border-bottom: 2px solid #5b6a75;
+}
+
+.headerContentPadding {
+    padding: 0px 25px
 }
 
 .outerContainerMargin {
@@ -65,6 +69,7 @@
 
 .bannerImage {
     background-image: url(./../Image/background.jpg);
+    background-size: cover;
 }
 
 .bannerHeight {
@@ -77,6 +82,14 @@
 
 .padding10Horizontal {
     padding : 0px 10px;
+}
+
+.padding10Vertical {
+    padding: 10px 0px
+}
+
+.inlineBlock {
+    display: inline-block;
 }
 
 .sectionHeight {
@@ -115,7 +128,7 @@
 }
 
 .blueBackgroundColor {
-    background-color: #03a9f5
+    background-color: #f0f4ff
 }
 
 .grayBackgroundColor {
@@ -123,21 +136,36 @@
 }
 
 .readMoreButton {
-    color: #114366;
+    color: #4e67eb;
+    font-size: 18px;
+    text-decoration-line: none;
+}
+
+.readMoreButton:hover {
+    color: #4e67eb;
     font-size: 18px;
     text-decoration-line: none;
 }
 
 .readMoreLink {
-    color: #114366;
+    color: #4e67eb;
     font-size:16px ;
-    text-decoration-line: underline;
+    text-decoration-line: none;
 }
 
 .headerLink {
     color: #5b6a75;
-    font-size: inherit;
+    font-size: 20px;
     text-decoration-line: none;
+}
+
+.headerLink:hover {
+    text-decoration-line: none;
+    color: #4e67eb
+}
+
+.headerBorder {
+    border-bottom: 2px solid #5b6a75 ;
 }
 
 .margin2035 {
@@ -157,11 +185,23 @@
     align-items: flex-start
 }
 
-@media screen and (max-device-width:640px), screen and (max-width:640px) {
-    
+.headerPadding {
+    padding: 1em 0px !important
 }
 
-@media only screen and (max-width: 414px) {
+.serviceLink:hover {
+    text-decoration: none;
+    color: #404144
+}
+.logoStyle {
+    width: 100px
+}
+
+/* @media screen and (max-device-width:640px), screen and (max-width:640px) {
+    
+} */
+
+@media only screen and (max-width: 640px) {
     .hideMobile {
         display: none;
     }
@@ -221,7 +261,15 @@
     }
     .margin0{
         margin: 0px !important
-    } 
+    }
+
+    .headerPadding{
+        padding: 0px 10px !important;
+    }
+
+    .headerContentPadding {
+        padding: 0px
+    }
 }
 
 

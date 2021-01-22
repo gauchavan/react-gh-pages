@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {SectionOneContainer, Title} from './../Styled/SectionOneStyles';
 import {ContactDiv, SubTitle, Paragraph, ContactContainer} from "./../Styled/ContactStyles";
 import {Button} from './../Styled/CommonStyles';
 import './../Header/Header.css';
@@ -26,32 +25,69 @@ const formDiv = {
     width: '100%'
 };
 class ContactUsForm extends Component{
-    // sendEmail = () => {
-    //     Email.send({
-    //         Host: "smtp.gmail.com",
-    //         Username : "<sender’s email address>",
-    //         Password : "<email password>",
-    //         To : '<recipient’s email address>',
-    //         From : "<sender’s email address>",
-    //         Subject : "<email subject>",
-    //         Body : "<email body>",
-    //         }).then(
-    //             message => alert("mail sent successfully")
-    //         );
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+          name: '',
+          email: '',
+          message: '',
+          number: ''
+        }
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+    
+        fetch('http://localhost:3002/send',{
+            method: "POST",
+            body: JSON.stringify(this.state),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+          }).then(
+            (response) => (response.json())
+           ).then((response)=>{
+          if (response.status === 'success'){
+            alert("Message Sent."); 
+            this.resetForm()
+          }else if(response.status === 'fail'){
+            alert("Message failed to send.")
+          }
+        })
+    }
+
+    onNameChange(event) {
+        this.setState({name: event.target.value})
+    }
+
+    onNumberChange(event) {
+        this.setState({number: event.target.value})
+    }
+    
+    onEmailChange(event) {
+        this.setState({email: event.target.value})
+    }
+
+    onMessageChange(event) {
+        this.setState({message: event.target.value})
+    }
+
+    resetForm(){
+        this.setState({name: '', email: '', message: '', number: ''})
+    }
+
     render(){
         return(
-            <div style={formDiv}>
-                {/* <label style={labelStyle}>Name</label> */}
-                <input style={inputTextStyle} type='text' placeholder='Name'/>
-                {/* <label style={labelStyle}>Contact Number</label> */}
-                <input style={inputTextStyle} type='text' placeholder='Number'/>
-                {/* <label style={labelStyle}>Email Address</label> */}
-                <input style={inputTextStyle} type='email' placeholder='Email Address'/>
-                {/* <label style={labelStyle}>Message</label> */}
-                <textarea style={inputTextStyle} type='text' placeholder='Message'/>
-                <Button type='button' onClick={this.sendEmail}>CONTACT US</Button>
-            </div>
+            <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                <div style={formDiv}>
+                    <input style={inputTextStyle} type='text' placeholder='Name' value={this.state.name} onChange={this.onNameChange.bind(this)}/>
+                    <input style={inputTextStyle} type='text' placeholder='Number' value={this.state.number} onChange={this.onNumberChange.bind(this)}/>
+                    <input style={inputTextStyle} type='email' aria-describedby="emailHelp" placeholder='Email Address' value={this.state.email} onChange={this.onEmailChange.bind(this)}/>
+                    <textarea style={inputTextStyle} type='text' placeholder='Message' value={this.state.message} onChange={this.onMessageChange.bind(this)}/>
+                    <Button type='sumbit' onClick={this.sendEmail}>CONTACT US</Button>
+                </div>
+            </form>    
         );
     }
 }

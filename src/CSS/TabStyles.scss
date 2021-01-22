@@ -33,6 +33,7 @@ h1{
       cursor:pointer;
       overflow:hidden;
       width: 100%;
+      color: #5b6a75;
       
       // &:after{
       //   position:absolute;
@@ -51,7 +52,7 @@ h1{
       &.active{
         // padding:15px 15px 15px 15px;
         background-color: white;
-        color: #114366;
+        color: #4e67eb;
         &:after{
          bottom:0;
         }
@@ -61,7 +62,8 @@ h1{
         // color:$c-one;
         // background: rgba($c-one, 0.4);
         // background-color: rgba(255, 255, 255, 0.5);
-        color: #114366;
+        // color: #fff;
+        text-decoration: none;
       }
       // &:nth-child(2){
       //   &:hover{
@@ -91,12 +93,17 @@ h1{
     // justify-content:center;
     // align-items:center;
     // height:40vh;
-    background-color: rgb(249, 249, 249);
+    background-color: #f9f9f9;
     line-height: 1.5;
     font-family: 'Fira_Sans_Regular';
+    color: #5b6a75
     
     h2{
       color:#114366;
+    }
+
+    li{
+      color:#5b6a75
     }
     
     // &.fade{

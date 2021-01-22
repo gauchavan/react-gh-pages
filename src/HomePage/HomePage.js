@@ -14,7 +14,8 @@ import {
     Switch,
     Route,
     Link,
-    useLocation
+    useLocation,
+    useParams
   } from "react-router-dom";
 import AboutUs from '../AboutUs/AboutUs';
 
@@ -24,10 +25,15 @@ import AboutUs from '../AboutUs/AboutUs';
 
   export default function RouterSection() {
     return (
-        <Router basename={window.location.pathname || ''}>
+        <Router>
             <Switch>
-                <Route exact path='/' children={<HomePage />} />
-                <Route path='/about' children={<AboutUsPage />} />
+                <Route exact path='/'>
+                    <HomePage />
+                </Route>
+                <Route path='/about'>
+                    <AboutUsPage />
+                </Route>
+                <Route exact path='/services' children={<ServicesPage />} />
                 <Route path='/services/:id' children={<ServicesPage />} />
             </Switch>
         </Router>
@@ -40,7 +46,7 @@ function HomePage() {
             <Header />
             <SectionOne sectionContent='BannerContent'/>
             <ServiceSection />
-            <Testimonial />
+            {/* <Testimonial /> */}
             <Contact />
             <Footer/>
         </ContainerColumn>
@@ -53,7 +59,7 @@ function AboutUsPage() {
             <Header />
             <SectionOne sectionContent='CommonBanner' section='about'/>
             <AboutUs />
-            <Testimonial />
+            {/* <Testimonial /> */}
             <Contact />
             <Footer/>
         </ContainerColumn>
@@ -65,13 +71,15 @@ function useQuery() {
 }
 
 function ServicesPage() {
+    let { id } = useParams();
+    console.log(id, 'id');
     let query = useQuery();
     return (
         <ContainerColumn>
             <Header />
             <SectionOne sectionContent='CommonBanner' section='service'/>
-            <Tabs/>
-            <Testimonial />
+            <Tabs id={id}/>
+            {/* <Testimonial /> */}
             <Contact />
             <Footer/>
         </ContainerColumn>

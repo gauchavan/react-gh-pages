@@ -8,24 +8,21 @@ import './../Header/Header.css';
 class Contact extends Component{
     render(){
         return(
-            <ContainerRow id='contact' className='blueBackgroundColor mobileColumn'>
-                <ContainerRow className='width100Percent outerContainerMargin mobileColumn margin0'>
+            <ContainerRow id='contact' className='mobileColumn'>
+                <ContainerRow className='width100Percent outerContainerMargin mobileColumn margin0 justifyContentCenter alignItemCenter padding20'>
                     <ContainerRow className='widthAdjustment justifyContentCenter alignItemCenter padding10All mobileColumn'>
-                        <SectionHeading color={COLOR.WHITE}>
-                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.BLUE} name='phone-alt'/>
+                        <SectionHeading color={COLOR.HEADING}>
+                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.DARK_BLUE} name='phone-alt'/>
                             <span className='hideMobile'>Call us on:</span>
                         </SectionHeading>
-                        <SubTitle className='margin0' color={COLOR.WHITE}>+919820746792 / +918082016560</SubTitle>
+                        <SubTitle className='margin0' color={COLOR.PURPLE}>+919820746792 / +918082016560</SubTitle>
                     </ContainerRow>    
-                    <SectionHeading className='widthAdjustment margin2035 justifyContentCenter alignItemCenter mobileColumn'>
-                        OR
-                    </SectionHeading>
                     <ContainerRow className='widthAdjustment justifyContentCenter alignItemCenter padding10All mobileColumn'>
-                        <SectionHeading color={COLOR.WHITE}>
-                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.BLUE} name='envelope-open-text'/>
+                        <SectionHeading color={COLOR.HEADING}>
+                            <FontIcon padding='0px 15px' font='25px' align='center' color={COLOR.DARK_BLUE} name='envelope-open-text'/>
                             <span className='hideMobile'>Email us on:</span>
                         </SectionHeading>
-                        <SubTitle className='margin0' color={COLOR.WHITE}>sksi.consultancy@gmail.com</SubTitle>
+                        <SubTitle className='margin0' color={COLOR.PURPLE}>sksi.consultancy@gmail.com</SubTitle>
                     </ContainerRow>
                 </ContainerRow>
                 

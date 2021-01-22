@@ -7,14 +7,16 @@ import * as COLOR from './../Constants/COLOR';
 class CommonBanner extends Component {
     render(){
         return (
-            <ContainerRow className='outerContainerMargin padding10Horizontal alignItemCenter'>
+            <ContainerRow className='outerContainerMargin padding10Horizontal alignItemCenter mobileColumn'>
                 <FlexColumn className='width60Percent'>
                     <div>
-                        <Title color={COLOR.WHITE}>{this.props.heading}</Title>
-        <SubTitle color={COLOR.WHITE}>{this.props.subHeading ? this.props.subHeading : 'Someone has correctly said “ You are what you do, not what you say you will do”, <br/> we at SKSI believe in this quote and walk the way towards quality service with personal attention to each client.'}</SubTitle>
+                        <Title className='marginZero' color={COLOR.WHITE}>{this.props.heading}</Title>
+                        <SubTitle className='marginZero' color={COLOR.WHITE}>{
+                            this.props.subHeading ? this.props.subHeading : 'Someone has correctly said “ You are what you do, not what you say you will do”, <br/> we at SKSI believe in this quote and walk the way towards quality service with personal attention to each client.'
+                        }</SubTitle>
                     </div>
                 </FlexColumn>
-                <ContactForm />
+                <ContactForm className='width40Percent'/>
             </ContainerRow>
         );
     }

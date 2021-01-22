@@ -10,5 +10,11 @@ export const BLUE='#114366'
 export const GRAY='#5b6a75'
 export const ORANGE='Tomato'
 export const LIGHT_BLUE='rgb(3, 169, 245)'
+export const PURPLE='#4e67eb'
+export const DARK_BLUE='#291d89'
+export const HEADING='#353755'
+export const SUBHEADING='#5b6a75'
+
+
 
 

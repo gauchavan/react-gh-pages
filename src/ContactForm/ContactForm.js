@@ -15,7 +15,6 @@ class ContactUs extends Component{
             <FlexColumn id='contactus' className='widthAdjustment'>
                 <WhiteContainer style={backgroundColor}>
                     <ContactFormSection>
-                        {/* <SectionHeading style={{color: '#fff', marginBottom: '10px'}} >Contact us</SectionHeading> */}
                         <ContactUsForm />
                     </ContactFormSection>
                 </WhiteContainer>

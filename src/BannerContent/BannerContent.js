@@ -12,7 +12,7 @@ class BannerContent extends Component {
                     <div>
                         <SubTitle className='marginZero' color={COLOR.WHITE}>Warm Welcome to</SubTitle>
                         <Title className='marginZero' color={COLOR.WHITE}>SKSI & Associates</Title>
-                        <SubTitle className='marginZero' color={COLOR.WHITE}>Someone has correctly said “ You are what you do, not what you say you will do”, <br/> we at SKSI believe in this quote and walk the way towards quality service with personal attention to each client.</SubTitle>
+                        <SubTitle className='marginZero' color={COLOR.WHITE}>Someone has correctly said “You are what you do, not what you say you will do” <span class="padding10Vertical inlineBlock">We at SKSI believe in this quote and walk the way towards quality service with personal attention to each client.</span></SubTitle>
                     </div>
                 </FlexColumn>
                 <ContactForm className='width40Percent' />
